@@ -4,9 +4,6 @@ import React, { useState } from 'react';
 export default function App() {
   const [backgroundColor, setBackgroundColor] = useState('');
   const generateRandomColor = () => {
-    const newRandomColor = randomColor();
-    setBackgroundColor(newRandomColor);
-  };
 
   return (
     <>
