@@ -1,19 +1,19 @@
+import './App.css';
 import randomColor from 'randomcolor';
 import React, { useState } from 'react';
 
 export default function App() {
   const [backgroundColor, setBackgroundColor] = useState('');
-  const generateRandomColor = () => {
+
+  const colorBoxStyle = {
+    color: 'white',
+    backgroundColor: backgroundColor,
+  };
 
   return (
-    <>
+    <div className="container">
       <h1>Random Color Generator</h1>
-      <div
-        style={{
-          color: 'white',
-          backgroundColor: backgroundColor,
-        }}
-      >
+      <div className="color-box" style={colorBoxStyle}>
         Generated Color: {backgroundColor}
       </div>
       <br />
@@ -26,6 +26,6 @@ export default function App() {
       >
         Generate
       </button>
-    </>
+    </div>
   );
 }
